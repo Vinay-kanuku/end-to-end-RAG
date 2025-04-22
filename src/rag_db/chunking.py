@@ -1,6 +1,7 @@
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from constants import CHUNK_SIZE, CHUNK_OVERLAP
+# from constants import CHUNK_SIZE, CHUNK_OVERLAP
+from src.constants import CHUNK_SIZE, CHUNK_OVERLAP
 class TextChunker:
     def __init__(self, chunk_size=CHUNK_SIZE, chunk_overlap=CHUNK_OVERLAP):
         self.text_splitter = RecursiveCharacterTextSplitter(

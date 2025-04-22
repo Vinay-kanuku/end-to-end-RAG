@@ -1,8 +1,9 @@
 from pathlib import Path
-from constants import DATA_DIR_NAME
+from src.constants import DATA_DIR_NAME
  
 from langchain_community.document_loaders import TextLoader
 from langchain_community.document_loaders import DirectoryLoader
+import hashlib
 
 def load_doc_using_langchain():
     loader = DirectoryLoader(path="data/",
@@ -21,9 +22,15 @@ def format_documents(documents):
         content = doc.page_content.strip()
         if content not in seen:
             seen.add(content)
-            formatted_chunks.append(f"\n🔹 **Chunk {i+1}**:\n{content}")
+            formatted_chunks.append(f"\n{content}")
 
     return "\n".join(formatted_chunks)
+
+
+
+
+def hash_text(text):
+    return hashlib.md5(text.encode("utf-8")).hexdigest()
 
 
 def get_all_dirs(path: Path):

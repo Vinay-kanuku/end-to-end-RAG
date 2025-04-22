@@ -3,3 +3,4 @@ __pycache__
 venv/
 ai_tutor.egg-info
 data/
+logs/
