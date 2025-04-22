@@ -1,0 +1,44 @@
+[project]
+name = "ai_tutor"
+version = "0.1.0"
+description = "Helps with long youtube videos and articles" 
+authors = [{ name="Vinay", email="vinaykanuku7565@gmail.com" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = [
+    "attrs==23.2.0",
+    "Babel==2.10.3",
+    "cryptography==41.0.7",
+    "Jinja2==3.1.2",
+    "jsonschema==4.10.3",
+    "libtmux==0.30.2",
+    "markdown-it-py==3.0.0",
+    "Pillow==10.2.0",
+    "langchain==0.3.23",
+    "requests==2.31.0",
+    "rich==13.7.1",
+    "tmuxp==1.38.0",
+    "PyYAML==6.0.1"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["rag"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+select = ["E", "F", "I"]
+line-length = 88
