@@ -1,4 +1,4 @@
-from constants import DATA_DIR_NAME, YOUTUBE_DATA_DIR_NAME, ARTICLE_DATA_DIR_NAME
+from src.constants import DATA_DIR_NAME, YOUTUBE_DATA_DIR_NAME, ARTICLE_DATA_DIR_NAME
 import os 
 
 class ConfigManager:

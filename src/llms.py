@@ -4,9 +4,11 @@ from src.constants import PROMPT_TEMPLATES, GEMINI_MODEL_NAME
 from dotenv import load_dotenv
 import os 
 from  src.utils import format_documents
+from abc import ABC, abstractmethod 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 genai.configure(api_key=API_KEY)
+
 
 def run_gemini(prompt):
     model = genai.GenerativeModel(GEMINI_MODEL_NAME)

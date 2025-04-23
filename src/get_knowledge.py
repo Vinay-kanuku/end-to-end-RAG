@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import re
 from youtube_transcript_api import YouTubeTranscriptApi
 from typing import Optional
-from config import YoutubeConfig, ArticleConfig
+from src.config import YoutubeConfig, ArticleConfig
 from datetime import datetime
  
 class KnowledgeBase(ABC):

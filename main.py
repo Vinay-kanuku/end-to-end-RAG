@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from src.pipeline.ingestion_pipeline import run_ingestion
 from src.utils import format_documents
 import os
-from src.gemini import run_gemini
+from src.llms import run_gemini
 from src.constants import PROMPT_TEMPLATES
 os.makedirs('logs', exist_ok=True)
 
